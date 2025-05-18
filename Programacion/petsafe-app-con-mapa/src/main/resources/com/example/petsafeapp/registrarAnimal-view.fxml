@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="panelContenido" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="655.0" prefWidth="411.0" style="-fx-background-color: #F8F8F8; -fx-padding: 20px;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.petsafeapp.RegistrarAnimalController">
+   <children>
+      <!-- Sección Situación -->
+      <Pane layoutX="20.0" layoutY="20.0" prefWidth="371.0">
+         <children>
+            <Label text="Situación">
+               <font>
+                  <Font name="System Semibold" size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Label>
+            <ComboBox fx:id="situacionComboBox" layoutY="28.0" prefHeight="35.0" prefWidth="371.0" promptText="Seleccione la situación del animal" style="-fx-background-color: #fff; -fx-border-color: #cccccc; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-font-size: 13px;" />
+         </children>
+      </Pane>
+
+      <!-- Sección Dirección -->
+      <Pane layoutX="20.0" layoutY="90.0" prefWidth="371.0">
+         <children>
+            <Label text="Dirección">
+               <font>
+                  <Font name="System Semibold" size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Label>
+            <HBox layoutY="28.0" prefWidth="371.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="calleDireccionTextField" prefHeight="35.0" promptText="Calle..." style="-fx-background-color: #fff; -fx-border-color: #cccccc; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-font-size: 13px;" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="numeroDireccionTextField" prefHeight="35.0" prefWidth="80.0" promptText="Nº" style="-fx-background-color: #fff; -fx-border-color: #cccccc; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-font-size: 13px;" />
+                  <TextField fx:id="ciudadDireccionTextField" prefHeight="35.0" promptText="Ciudad..." style="-fx-background-color: #fff; -fx-border-color: #cccccc; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-font-size: 13px;" HBox.hgrow="ALWAYS" />
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+
+      <!-- Sección Descripción -->
+      <Pane layoutX="20.0" layoutY="165.0" prefWidth="371.0">
+         <children>
+            <Label text="Descripción">
+               <font>
+                  <Font name="System Semibold" size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Label>
+            <TextArea fx:id="descripcionTextArea" layoutY="28.0" prefHeight="100.0" prefWidth="371.0" promptText="Añada una descripción detallada..." style="-fx-background-color: #fff; -fx-border-color: #cccccc; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-font-size: 13px; -fx-wrap-text: true;" />
+         </children>
+      </Pane>
+
+      <!-- Sección Tipo -->
+      <Pane layoutX="20.0" layoutY="295.0" prefWidth="371.0">
+         <children>
+            <Label text="Tipo">
+               <font>
+                  <Font name="System Semibold" size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Label>
+            <ComboBox fx:id="tipoComboBox" layoutY="28.0" prefHeight="35.0" prefWidth="371.0" promptText="Seleccione el tipo de animal" style="-fx-background-color: #fff; -fx-border-color: #cccccc; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-font-size: 13px;" />
+         </children>
+      </Pane>
+
+      <!-- Sección Imagen -->
+      <Pane layoutX="20.0" layoutY="365.0" prefWidth="371.0">
+         <children>
+            <Label text="Imagen">
+               <font>
+                  <Font name="System Semibold" size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Label>
+            <Button fx:id="imagenesButton" alignment="CENTER_LEFT" graphicTextGap="10.0" layoutY="28.0" mnemonicParsing="false" onAction="#onImagenesButtonClick" prefHeight="35.0" prefWidth="371.0" style="-fx-background-color: #fff; -fx-border-color: #cccccc; -fx-border-radius: 5px; -fx-background-radius: 5px; -fx-font-size: 13px; -fx-text-fill: #333;" text="Seleccionar imagen">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/nuevo-archivo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Button>
+         </children>
+      </Pane>
+
+      <!-- Sección Fecha -->
+      <Pane layoutX="20.0" layoutY="435.0" prefWidth="371.0">
+         <children>
+            <Label text="Fecha">
+               <font>
+                  <Font name="System Semibold" size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Label>
+            <DatePicker fx:id="fechaDatePicker" layoutY="28.0" prefHeight="35.0" prefWidth="371.0" promptText="Seleccione la fecha" style="-fx-background-color: #fff; -fx-border-color: #cccccc; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-font-size: 13px;" />
+         </children>
+      </Pane>
+
+      <!-- Sección Contacto -->
+      <Pane layoutX="20.0" layoutY="505.0" prefWidth="371.0">
+         <children>
+            <Label text="Contacto">
+               <font>
+                  <Font name="System Semibold" size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="contactoTextField" layoutY="28.0" prefHeight="35.0" prefWidth="371.0" promptText="Información de contacto" style="-fx-background-color: #fff; -fx-border-color: #cccccc; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-font-size: 13px;" />
+         </children>
+      </Pane>
+
+      <!-- Botón Añadir Animal -->
+      <Button layoutX="20.0" layoutY="580.0" mnemonicParsing="false" onAction="#onAddAnimalButtonClick" prefHeight="45.0" prefWidth="371.0" style="-fx-background-color: #F4842B; -fx-background-radius: 5px; -fx-font-weight: bold; -fx-font-size: 15px;" text="Añadir animal" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</Pane>

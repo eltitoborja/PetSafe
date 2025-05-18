@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="panelNegocio" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="655.0" prefWidth="411.0" style="-fx-background-color: #FAF3E0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.petsafeapp.NegocioController">
+   <children>
+      <ImageView fx:id="logoImageView" fitHeight="115.0" fitWidth="147.0" layoutX="48.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-color: #FFFFFF;" />
+      <Label fx:id="nombreLabel" alignment="CENTER" layoutX="228.0" layoutY="78.0" prefHeight="42.0" prefWidth="136.0" style="-fx-background-color: #F4842B; -fx-background-radius: 10; -fx-text-fill: white;" textAlignment="CENTER" textFill="#47434d">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label fx:id="descipcionLabel" alignment="TOP_CENTER" layoutX="46.0" layoutY="177.0" minHeight="-Infinity" prefHeight="176.0" prefWidth="319.0" textAlignment="CENTER" textFill="#47434d" wrapText="true" />
+      <Label alignment="CENTER" layoutX="116.0" layoutY="380.0" prefHeight="19.0" prefWidth="180.0" style="-fx-background-color: #F4842B; -fx-background-radius: 10; -fx-text-fill: white; -fx-font-weight: bold;" text="CONTACTO" textAlignment="CENTER">
+         <font>
+            <Font size="13.0" />
+         </font></Label>
+      <Label alignment="CENTER" graphicTextGap="0.0" layoutX="48.0" layoutY="422.0" prefHeight="19.0" prefWidth="111.0" text="Correo Electrónico:" textAlignment="CENTER" textFill="#47434d">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="260.0" layoutY="422.0" prefHeight="19.0" prefWidth="111.0" text="Teléfono:" textAlignment="CENTER" textFill="#47434d">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <ImageView fx:id="correoImageView" fitHeight="29.0" fitWidth="36.0" layoutX="78.0" layoutY="452.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-color: #FFFFFF;" />
+      <ImageView fx:id="telefonoImageView" fitHeight="29.0" fitWidth="36.0" layoutX="298.0" layoutY="452.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-color: #FFFFFF;" />
+      <Label fx:id="emailLabel" alignment="CENTER" layoutX="48.0" layoutY="489.0" prefHeight="19.0" prefWidth="111.0" textAlignment="CENTER" textFill="#47434d" />
+      <Label fx:id="telefonoLabel" alignment="CENTER" layoutX="260.0" layoutY="489.0" prefHeight="19.0" prefWidth="111.0" textAlignment="CENTER" textFill="#47434d" />
+      <Label alignment="CENTER" layoutX="151.0" layoutY="534.0" prefHeight="19.0" prefWidth="111.0" text="Dirección:" textAlignment="CENTER" textFill="#47434d">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <ImageView fx:id="direccionImageView" fitHeight="29.0" fitWidth="36.0" layoutX="188.0" layoutY="564.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-color: #FFFFFF;" />
+      <Label fx:id="direccionLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="116.0" layoutY="599.0" prefHeight="19.0" prefWidth="180.0" textAlignment="CENTER" textFill="#47434d" />
+   </children>
+</Pane>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="localesTabla" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#onClickTabla" prefHeight="655.0" prefWidth="411.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.petsafeapp.ListaLocalesController">
+   <children>
+      <TableView fx:id="listaTabla" layoutX="13.0" layoutY="16.0" onMouseClicked="#onClickTabla" prefHeight="568.0" prefWidth="386.0">
+        <columns>
+          <TableColumn fx:id="nombreColumn" prefWidth="139.20001792907715" text="Nombre" />
+          <TableColumn fx:id="direccionColumn" prefWidth="133.60003662109375" text="Dirección" />
+            <TableColumn fx:id="contactoColumn" minWidth="6.39996337890625" prefWidth="110.80001831054688" text="Contacto" />
+            <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" visible="false" />
+        </columns>
+      </TableView>
+      <Button fx:id="verButton" disable="true" layoutX="37.0" layoutY="590.0" mnemonicParsing="false" onAction="#onVerButtonClick" prefHeight="40.0" prefWidth="80.0" style="-fx-background-color: #6c757d; -fx-background-radius: 5px; -fx-font-weight: bold;" text="Ver" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

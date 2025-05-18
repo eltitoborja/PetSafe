@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="panelContenido" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="655.0" prefWidth="411.0" style="-fx-background-color: #F8F8F8; -fx-padding: 20px;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.petsafeapp.PerfilUsuarioController">
+   <children>
+      <!-- Imagen de perfil - más grande, centrada y con bordes redondeados -->
+      <ImageView fx:id="fotoPerfilImageView" fitHeight="100.0" fitWidth="100.0" layoutX="155.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-color: #cccccc; -fx-border-width: 2px; -fx-border-radius: 50px; -fx-background-radius: 50px;">
+         <image>
+            <Image url="@../../../images/perfil-de-usuario.png" />
+         </image>
+         <!-- Para un efecto circular perfecto, considera usar imageView.setClip(new Circle(...)) en el controlador -->
+      </ImageView>
+      
+      <VBox layoutX="20.0" layoutY="151.0" prefWidth="371.0" spacing="12.0"> <!-- Ajustado layout, prefWidth y spacing -->
+         <children>
+            <VBox spacing="5.0"> <!-- Añadido spacing interno -->
+               <children>
+                  <Label text="Nombre">
+                     <font>
+                        <Font name="System Semibold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nombreTextField" prefHeight="35.0" promptText="Tu nombre" style="-fx-background-color: #fff; -fx-border-color: #cccccc; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-font-size: 13px;" />
+               </children>
+            </VBox>
+            <VBox spacing="5.0">
+               <children>
+                  <Label text="Email">
+                     <font>
+                        <Font name="System Semibold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="emailTextField" prefHeight="35.0" promptText="tu.email@ejemplo.com" style="-fx-background-color: #fff; -fx-border-color: #cccccc; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-font-size: 13px;" />
+               </children>
+            </VBox>
+            <VBox spacing="5.0">
+               <children>
+                  <Label text="Contraseña">
+                     <font>
+                        <Font name="System Semibold" size="14.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="contrasenaPasswordField" prefHeight="35.0" promptText="Nueva contraseña (opcional)" style="-fx-background-color: #fff; -fx-border-color: #cccccc; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-font-size: 13px;" />
+               </children>
+            </VBox>
+            <VBox spacing="5.0">
+               <children>
+                  <Label text="Teléfono de contacto">
+                     <font>
+                        <Font name="System Semibold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="telefonoTextField" prefHeight="35.0" promptText="Tu número de teléfono" style="-fx-background-color: #fff; -fx-border-color: #cccccc; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-font-size: 13px;" />
+               </children>
+            </VBox>
+            <VBox spacing="5.0">
+               <children>
+                  <Label text="Foto de perfil">
+                     <font>
+                        <Font name="System Semibold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="fotoPerfilButton" alignment="CENTER_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#onFotoPerfilButtonClick" prefHeight="35.0" prefWidth="371.0" style="-fx-background-color: #fff; -fx-border-color: #cccccc; -fx-border-radius: 5px; -fx-background-radius: 5px; -fx-font-size: 13px; -fx-text-fill: #333;" text="Selecciona una imagen">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/nuevo-archivo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </VBox>
+            <Button mnemonicParsing="false" onAction="#onEditarPerfilButtonClick" prefHeight="45.0" prefWidth="371.0" style="-fx-background-color: #007bff; -fx-background-radius: 5px; -fx-font-weight: bold;" text="Guardar Cambios" textFill="WHITE"> <!-- Botón principal con color azul -->
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="15.0" /> <!-- Margen superior para el botón -->
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</Pane>

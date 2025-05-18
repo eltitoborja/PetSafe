@@ -1,0 +1,1223 @@
+html {
+  scroll-behavior: smooth;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: #f7f7f7;
+  color: #333;
+  width: 100vw;
+  overflow-x: hidden;
+  
+}
+
+/* Asegurar que todos los elementos hereden box-sizing si se define en body */
+/* *, *:before, *:after {
+  box-sizing: inherit;
+} */
+
+header {
+  background: linear-gradient(90deg, #f7941d 0%, #f26522 100%);
+  color: #fff;
+  
+}
+
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 12px;
+  padding: 5px 30px 0 0;
+  gap: 20px;
+}
+
+.top-bar .social-icons i {
+  margin-left: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+   /* Reducido padding, se manejará en ul o li si es necesario */
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li.logo {
+  margin: 0 30px; /* Espacio alrededor del logo */
+}
+
+nav ul li.logo img {
+  width: 105px;
+  height: auto;
+  background: #fff;
+  border-radius: 8px;
+  padding: 2px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: block; /* Para evitar espacio extra debajo si es inline */
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 3px;
+  transition: background 0.2s, color 0.2s;
+}
+
+nav ul li.active a,
+nav ul li a:hover {
+  background: #fff;
+  color: #f26522;
+}
+
+nav ul li .btn-descargar {
+  background: #f26522;
+  color: #fff;
+  border-radius: 3px;
+  font-weight: bold;
+  border: none;
+  padding: 8px 18px;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+main {
+  background: linear-gradient(120deg, #fff 60%, #f7f7f7 100%);
+  padding-bottom: 40px;
+}
+
+h1 {
+  text-align: center;
+  color: #f7941d;
+  margin: 40px 0 30px 0;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+}
+
+.contenido {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 20px; /* Ajustado padding general */
+}
+
+.info {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.info-box {
+  background: #fff;
+  border: 6px solid #f7941d;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  padding: 36px 32px 28px 32px;
+  max-width: 420px;
+  position: relative;
+  left: 30px;
+}
+
+.info-box h2 {
+  color: #f7941d;
+  font-size: 1.6rem;
+  margin: 0 0 18px 0;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.info-box p {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+.info-box .descarga {
+  color: #f7941d;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.stores {
+  display: flex;
+  gap: 10px;
+}
+
+.store-badge {
+  height: 40px;
+  cursor: pointer;
+  max-width: 100%; /* Para que no se desborden */
+}
+
+.mockup {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.phone { /* Este es el mockup interactivo, no la imagen grande de .mockup img */
+  background: #fffbe6;
+  border: 4px solid #222;
+  border-radius: 30px;
+  width: 300px;
+  min-height: 520px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 15px 20px 15px; /* Ajustado padding lateral */
+  position: relative;
+  box-sizing: border-box; /* Para incluir padding y border en el width */
+}
+
+.phone-logo {
+  width: 120px;
+  margin-bottom: 18px;
+  max-width: 100%;
+}
+
+.phone button {
+  width: 80%;
+  margin: 8px 0;
+  padding: 10px 0;
+  background: #f7941d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.phone button:hover {
+  background: #f26522;
+}
+
+.phone .login {
+  margin-top: 18px;
+  color: #888;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.mockup img { /* Esta es la imagen grande en la sección hero */
+  width: 650px;
+  max-width: 90vw; /* Ya es responsivo, pero se puede ajustar más */
+  margin-left: 40px;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));
+  height: auto; /* Mantener proporción */
+}
+
+.sobre-app {
+  max-width: 1200px;
+  margin: 60px auto 0 auto;
+  padding: 0 20px 60px 20px;
+  text-align: center;
+}
+
+.sobre-app h2 {
+  color: #f7941d;
+  font-size: 2rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.sobre-desc {
+  color: #222;
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  line-height: 1.6; /* Mejorado line-height */
+}
+
+.sobre-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 60px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.sobre-movil img {
+  width: 340px;
+  max-width: 90vw;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));
+  height: auto; /* Mantener proporción */
+}
+
+.sobre-cajas {
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.sobre-caja {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 28px 32px;
+  text-align: left;
+  border: 1.5px solid #f7f7f7;
+}
+
+.sobre-icono {
+  color: #f7941d;
+  font-size: 1.5rem;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.sobre-caja h3 {
+  color: #f7941d;
+  font-size: 1.15rem;
+  margin: 0 0 8px 0;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.sobre-caja p {
+  color: #222;
+  font-size: 0.98rem;
+  margin: 0;
+  line-height: 1.6; /* Mejorado line-height */
+}
+
+.caracteristicas-app {
+  width: 100%;
+  background: #fafafa;
+  padding: 60px 20px; /* Padding lateral añadido */
+}
+
+.caracteristicas-grid {
+  display: grid;
+  grid-template-areas:
+    ". top ."
+    "left-top movil right-top"
+    "left-bottom movil right-bottom"
+    ". bottom .";
+  grid-template-columns: 1fr 320px 1fr;
+  grid-template-rows: auto 1fr 1fr auto; /* auto para filas de contenido */
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 18px 30px;
+  align-items: center;
+  position: relative;
+}
+
+.caracteristica {
+  background: none;
+  text-align: center;
+  color: #222;
+  padding: 20px 10px; /* Ajustado padding */
+}
+
+.caracteristica h3 {
+  font-size: 1.1rem;
+  color: #222;
+  margin: 10px 0 8px 0;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.caracteristica p {
+  font-size: 0.97rem;
+  color: #444;
+  margin: 0;
+  line-height: 1.6; /* Mejorado line-height */
+}
+
+.caracteristica .icono {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 4px;
+  opacity: 0.8;
+}
+
+.caracteristica.top { grid-area: top; }
+.caracteristica.left-top { grid-area: left-top; }
+.caracteristica.right-top { grid-area: right-top; }
+.caracteristica.left-bottom { grid-area: left-bottom; }
+.caracteristica.right-bottom { grid-area: right-bottom; }
+.caracteristica.bottom { grid-area: bottom; }
+
+.caracteristica-movil {
+  grid-area: movil;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.caracteristica-movil img {
+  width: 320px;
+  max-width: 90vw;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));
+  height: auto; /* Mantener proporción */
+}
+
+.interfaz-app {
+  text-align: center;
+  padding: 60px 20px 40px 20px; /* Padding lateral añadido */
+  background: #fff;
+}
+
+.interfaz-app h2 {
+  color: #f7941d;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.interfaz-desc {
+  color: #222;
+  font-size: 0.98rem;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6; /* Mejorado line-height */
+}
+
+.interfaz-mockup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0 20px 0;
+}
+
+.interfaz-mockup img, .video-movil { /* Estilos comunes para ambos */
+  width: 600px;
+  max-width: 95vw;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  border-radius: 18px;
+  height: auto; /* Mantener proporción */
+}
+.video-movil { /* Especificidades del video si las hay */
+    background: #000; /* Fondo para el contenedor del video */
+}
+
+.interfaz-paginacion {
+  margin-top: 18px;
+}
+
+.interfaz-paginacion .dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 4px;
+  background: #ffe0b2;
+  border-radius: 50%;
+  transition: background 0.2s;
+  cursor: pointer; /* Para indicar que son clickables */
+}
+
+.interfaz-paginacion .dot.active {
+  background: #f7941d;
+}
+
+.team-section {
+  padding: 40px 20px 60px 20px; /* Padding lateral añadido */
+  background: #fafbfc;
+  text-align: center;
+}
+
+.team-section h2 {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.team-desc {
+  color: #444;
+  font-size: 0.95rem;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6; /* Mejorado line-height */
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.team-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  padding: 32px 18px 22px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s; /* Añadida transition para transform */
+}
+
+.team-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+  transform: translateY(-5px); /* Efecto hover sutil */
+}
+
+.team-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #f7c873;
+  margin-bottom: 18px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #222;
+  margin: 0 0 4px 0;
+  letter-spacing: 1px;
+}
+
+.team-role {
+  font-size: 0.95rem;
+  color: #888;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: block;
+  letter-spacing: 1px;
+}
+
+.team-card p {
+  font-size: 0.93rem;
+  color: #444;
+  margin-bottom: 16px;
+  min-height: 40px; /* Para alinear tarjetas con descripciones de diferente longitud */
+  line-height: 1.5;
+}
+
+.team-social {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+.team-social a {
+  color: #222;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+.team-social a:hover {
+  color: #f7c873;
+}
+
+.contacto-section {
+  background: #fff;
+  padding: 60px 20px; /* Padding lateral añadido y unificado */
+  text-align: center;
+}
+
+.contacto-section h2 {
+  color: #f7941d;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.contacto-desc {
+  color: #444;
+  font-size: 0.97rem;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6; /* Mejorado line-height */
+}
+
+.contacto-form {
+  max-width: 480px;
+  margin: 0 auto;
+  background: #fafbfc;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  padding: 36px 28px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 1rem;
+  color: #f7941d;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%; /* Usa 100% para que se ajuste al padding del contenedor */
+  padding: 10px 12px;
+  border: 1.5px solid #f7c873;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #fff;
+  color: #222;
+  resize: vertical; /* Permitir redimensionar verticalmente textareas */
+  box-sizing: border-box; /* Importante para que padding no aumente el ancho */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #f7941d;
+  outline: 2px solid #f7941d40; /* Mejor outline en focus */
+}
+
+.btn-enviar {
+  background: linear-gradient(90deg, #f7941d 0%, #f26522 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.btn-enviar:hover {
+  background: linear-gradient(90deg, #f26522 0%, #f7941d 100%);
+}
+
+.footer {
+  background: linear-gradient(90deg, #f7941d 0%, #f26522 100%);
+  color: #fff;
+  padding: 40px 0 0 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 0 20px 20px 20px;
+}
+
+.footer-logo {
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 200px; /* Para evitar que se encoja demasiado */
+}
+
+.footer-logo img {
+  width: 90px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 6px 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.footer-logo p {
+  font-size: 0.95rem;
+  color: #fff;
+  margin: 0;
+  line-height: 1.5; /* Mejorado line-height */
+}
+
+.footer-links {
+  flex: 1 1 180px;
+  min-width: 150px; /* Para evitar que se encoja demasiado */
+}
+
+.footer-links h4,
+.footer-contacto h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 7px;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.97rem;
+  transition: text-decoration 0.2s, color 0.2s;
+}
+
+.footer-links ul li a:hover {
+  text-decoration: underline;
+  color: #ffe0b2;
+}
+
+.footer-contacto {
+  flex: 1 1 220px;
+  min-width: 200px; /* Para evitar que se encoja demasiado */
+}
+
+.footer-contacto p {
+  margin: 0 0 8px 0;
+  font-size: 0.97rem;
+  color: #fff;
+  line-height: 1.5; /* Mejorado line-height */
+}
+
+.footer-contacto i {
+  margin-right: 8px;
+  width: 1em; /* Para alinear iconos */
+  text-align: center;
+}
+
+.footer-social {
+  margin-top: 10px;
+}
+
+.footer-social a {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-right: 14px;
+  transition: color 0.2s;
+}
+.footer-social a:last-child {
+    margin-right: 0; /* Quitar margen al último icono */
+}
+
+.footer-social a:hover {
+  color: #ffe0b2;
+}
+
+/* --- Media Queries para Responsive --- */
+
+/* Tabletas Grandes y Escritorios Pequeños */
+@media (max-width: 1200px) {
+    .contenido {
+        gap: 40px;
+        padding: 30px 30px;
+    }
+    .info-box {
+        left: 15px; /* Reducir el desplazamiento */
+    }
+    .mockup img {
+        width: 550px;
+    }
+    .caracteristicas-grid {
+        grid-template-columns: 1fr 300px 1fr; /* Ajustar columna central */
+        gap: 15px 25px;
+    }
+}
+
+
+/* Tabletas (Retrato) y móviles grandes */
+@media (max-width: 992px) { /* Un punto de quiebre intermedio */
+    .top-bar {
+        padding: 5px 20px 0 0;
+        gap: 15px;
+    }
+    nav ul li.logo {
+        margin: 0 20px;
+    }
+    nav ul li a {
+        padding: 8px 12px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .contenido {
+        gap: 30px;
+        padding: 20px;
+    }
+    .info-box {
+        left: 0; /* Centrar la info-box */
+        max-width: 450px; /* Ajustar si es necesario */
+        padding: 30px 25px;
+    }
+    .mockup img {
+        width: 100%;
+        max-width: 500px;
+        margin-left: 0;
+    }
+    .sobre-app h2 {
+        font-size: 1.8rem;
+    }
+    .sobre-content {
+        gap: 40px;
+    }
+    .sobre-movil img {
+        width: 300px;
+    }
+    .caracteristicas-grid {
+        grid-template-columns: 1fr 260px 1fr;
+        gap: 15px 20px;
+    }
+    .caracteristica-movil img {
+        width: 260px;
+    }
+    .interfaz-mockup img, .video-movil {
+        width: 100%;
+        max-width: 550px;
+    }
+    .team-grid {
+        gap: 25px 20px;
+        padding: 0 10px; /* Evitar que las tarjetas toquen los bordes */
+    }
+    .contacto-form {
+        max-width: 450px;
+        padding: 30px 20px;
+    }
+    .footer-container {
+        gap: 30px;
+        padding: 0 30px 20px 30px;
+    }
+}
+
+
+/* Tabletas pequeñas y móviles en horizontal */
+@media (max-width: 768px) {
+    .top-bar {
+        font-size: 11px;
+        padding: 5px 15px 0 15px; /* Padding en ambos lados */
+        justify-content: space-between; /* Distribuir mejor */
+    }
+
+    nav {
+        padding: 10px 0;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    nav ul li {
+        margin: 8px 0;
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li.logo {
+        margin: 10px 0 15px 0;
+        order: -1; /* Poner el logo arriba */
+    }
+    nav ul li.logo img {
+        width: 90px;
+        padding: 2px 15px;
+    }
+    nav ul li a, nav ul li .btn-descargar {
+        display: block; /* Para que ocupen todo el ancho del li */
+        width: auto; /* Ajustar si se usa width en li */
+        margin: 0 auto; /* Centrar el contenido del enlace si es más pequeño */
+        max-width: 200px; /* Evitar que los botones sean demasiado anchos */
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        margin: 30px 0 20px 0;
+    }
+
+    .contenido {
+      flex-direction: column;
+      align-items: center;
+      gap: 25px; /* Reducido */
+      padding: 20px 15px;
+    }
+    .info {
+      justify-content: center;
+      width: 100%;
+    }
+    .info-box {
+      width: 100%;
+      max-width: none; /* Permitir que ocupe el ancho completo, limitado por .contenido */
+      padding: 25px 20px;
+      text-align: center;
+      border-width: 4px; /* Borde más delgado */
+    }
+    .info-box h2 {
+        font-size: 1.5rem;
+    }
+    .stores {
+        justify-content: center;
+    }
+    .store-badge {
+        height: 38px;
+    }
+
+    .mockup {
+      justify-content: center;
+      width: 100%;
+    }
+    .mockup img {
+        max-width: 400px; /* Mockup principal más pequeño */
+    }
+    .phone { /* Si el mockup .phone se usa en la sección .contenido */
+        width: 90%;
+        max-width: 280px;
+        min-height: auto;
+        padding: 25px 10px 15px 10px;
+    }
+    .phone-logo {
+        width: 100px;
+    }
+
+    .sobre-app {
+      margin: 40px auto 0 auto;
+      padding: 0 15px 40px 15px;
+    }
+    .sobre-app h2 {
+        font-size: 1.6rem;
+    }
+    .sobre-desc {
+        font-size: 0.95rem;
+    }
+    .sobre-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+      }
+    .sobre-movil img {
+        margin-bottom: 20px;
+        width: 260px;
+      }
+    .sobre-cajas {
+        gap: 20px;
+        width: 100%;
+    }
+    .sobre-caja {
+        padding: 20px 25px;
+    }
+    .sobre-caja h3 {
+        font-size: 1.1rem;
+    }
+
+    .caracteristicas-app {
+        padding: 40px 15px;
+    }
+    .caracteristicas-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+    .caracteristica {
+        padding: 15px 10px;
+        width: 100%;
+        max-width: 450px;
+    }
+    .caracteristica-movil {
+        order: 0; /* Restaurar orden o ajustar según preferencia */
+        margin-bottom: 15px;
+    }
+    .caracteristica-movil img {
+        width: 220px;
+      }
+
+    .interfaz-app {
+        padding: 40px 15px 30px 15px;
+    }
+    .interfaz-app h2 {
+        font-size: 1.4rem;
+    }
+    .video-movil, .interfaz-mockup img {
+        max-width: 100%; /* Ocupar ancho disponible */
+        border-radius: 12px;
+      }
+
+    .team-section {
+        padding: 30px 15px 40px 15px;
+    }
+    .team-section h2 {
+        font-size: 1.2rem;
+    }
+    .team-grid {
+        grid-template-columns: 1fr; /* Cambiar a una columna antes si es necesario */
+        gap: 20px;
+      }
+    
+    .contacto-section {
+        padding: 40px 15px;
+    }
+    .contacto-form {
+        padding: 24px 15px 18px 15px;
+        width: 100%;
+    }
+    .form-group label {
+        font-size: 0.95rem;
+    }
+    .form-group input, .form-group textarea {
+        font-size: 0.95rem;
+    }
+
+    .footer-container {
+      flex-direction: column;
+      align-items: center; /* Centrar todos los bloques del footer */
+      gap: 30px;
+      text-align: center;
+      padding: 0 15px 20px 15px;
+    }
+    .footer-logo,
+    .footer-links,
+    .footer-contacto {
+      align-items: center; /* Asegurar que el contenido interno también se centre */
+      width: 100%;
+      max-width: 350px;
+    }
+    .footer-logo img {
+        width: 80px;
+    }
+}
+
+/* Móviles (Retrato) */
+@media (max-width: 600px) {
+    .top-bar {
+        flex-direction: column; /* Apilar elementos */
+        align-items: center;
+        gap: 8px;
+        padding: 10px 10px 5px 10px;
+        font-size: 10px;
+    }
+    .top-bar .social-icons {
+        margin-left: 0; /* Resetear margen si se apila */
+    }
+    nav ul li.logo img {
+        width: 75px;
+    }
+    nav ul li a, nav ul li .btn-descargar {
+        font-size: 0.9rem;
+        padding: 7px 10px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        letter-spacing: 1px;
+    }
+
+    .contenido {
+        gap: 20px;
+        padding: 15px 10px;
+    }
+    .info-box {
+        padding: 20px 15px;
+    }
+    .info-box h2 {
+        font-size: 1.3rem;
+    }
+    .info-box p, .info-box .descarga {
+        font-size: 0.9rem;
+    }
+    .store-badge {
+        height: 35px;
+    }
+
+    .mockup img {
+        max-width: 90%; /* Que el mockup sea más adaptable */
+    }
+     .phone {
+        width: 95%;
+        max-width: 260px; /* Límite para el phone mockup */
+    }
+    .phone-logo {
+        width: 90px;
+    }
+    .phone button {
+        font-size: 0.9rem;
+        padding: 8px 0;
+    }
+
+    .sobre-app h2 {
+        font-size: 1.4rem;
+    }
+    .sobre-desc {
+        font-size: 0.9rem;
+    }
+    .sobre-movil img {
+        width: 80%;
+        max-width: 240px;
+    }
+    .sobre-cajas {
+        gap: 15px;
+    }
+    .sobre-caja {
+        padding: 15px 20px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .sobre-icono {
+        margin-bottom: 10px;
+        font-size: 1.3rem; /* Icono un poco más pequeño */
+    }
+    .sobre-caja h3 {
+        font-size: 1rem;
+    }
+    .sobre-caja p {
+        font-size: 0.88rem;
+    }
+
+    .caracteristicas-app {
+        padding: 30px 10px;
+    }
+    .caracteristica-movil img {
+        width: 180px;
+    }
+    .caracteristica h3 {
+        font-size: 1rem;
+    }
+    .caracteristica p {
+        font-size: 0.9rem;
+    }
+
+    .interfaz-app h2 {
+        font-size: 1.3rem;
+    }
+    .interfaz-desc {
+        font-size: 0.9rem;
+    }
+    .interfaz-paginacion .dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    .team-section h2 {
+        font-size: 1.1rem;
+    }
+    .team-desc {
+        font-size: 0.9rem;
+    }
+    .team-grid {
+        grid-template-columns: 1fr; /* Ya estaba pero se confirma */
+    }
+    .team-card {
+        padding: 25px 15px 20px 15px;
+    }
+    .team-img {
+        width: 80px;
+        height: 80px;
+    }
+    .team-card h3 {
+        font-size: 1rem;
+    }
+    .team-role {
+        font-size: 0.9rem;
+    }
+    .team-card p {
+        font-size: 0.85rem;
+        min-height: auto; /* Quitar min-height para que no deje mucho espacio vacío */
+    }
+
+    .contacto-section h2 {
+        font-size: 1.2rem;
+    }
+    .contacto-desc {
+        font-size: 0.9rem;
+    }
+    .contacto-form {
+        padding: 20px 10px 15px 10px;
+    }
+    .form-group label {
+        font-size: 0.9rem;
+    }
+    .form-group input, .form-group textarea {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+    .btn-enviar {
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+
+    .footer {
+        padding-top: 30px;
+    }
+    .footer-container {
+        gap: 20px; /* Menos gap en el footer */
+    }
+    .footer-logo p, .footer-links ul li a, .footer-contacto p {
+        font-size: 0.88rem;
+    }
+    .footer-links h4, .footer-contacto h4 {
+        font-size: 1rem;
+    }
+    .footer-social a {
+        font-size: 1.2rem;
+    }
+}
+
+/* Ajustes muy finos para pantallas extra pequeñas si es necesario */
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.4rem;
+    }
+    .info-box h2 {
+        font-size: 1.2rem;
+    }
+    .sobre-app h2 {
+        font-size: 1.2rem;
+    }
+    .phone {
+        padding: 20px 8px 10px 8px;
+    }
+    .phone button {
+        font-size: 0.85rem;
+    }
+    .team-card {
+        padding: 20px 10px;
+    }
+}

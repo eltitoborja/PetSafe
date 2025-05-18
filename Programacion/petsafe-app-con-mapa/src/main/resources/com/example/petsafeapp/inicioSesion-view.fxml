@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="panelRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="411.0" style="-fx-background-color: #FAF3E0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.petsafeapp.InicioSesionController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="700.0" prefWidth="411.0" spacing="25" style="-fx-background-color: transparent;">
+         <padding>
+            <Insets top="50" right="40" left="40" bottom="50"/>
+         </padding>
+         <children>
+            <ImageView fitHeight="223.0" fitWidth="268.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/logo-app.png" />
+               </image>
+            </ImageView>
+
+            <VBox spacing="20" prefWidth="331.0">
+               <children>
+                  <VBox spacing="8">
+                     <children>
+                        <Label text="Email" style="-fx-font-family: 'System';">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="emailTextField" prefHeight="50.0" promptText="email@email.com"
+                                   style="-fx-background-radius: 10;
+                                          -fx-border-radius: 10;
+                                          -fx-background-color: #fff;
+                                          -fx-border-color: #000;
+                                          -fx-font-size: 14px;">
+                        </TextField>
+                     </children>
+                  </VBox>
+
+                  <VBox spacing="8">
+                     <children>
+                        <Label text="Contraseña" style="-fx-font-family: 'System';">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="contraseñaPasswordField" prefHeight="50.0" promptText="Contraseña..."
+                                       style="-fx-background-radius: 10;
+                                              -fx-border-radius: 10;
+                                              -fx-background-color: #fff;
+                                              -fx-border-color: #000;
+                                              -fx-font-size: 14px;">
+                        </PasswordField>
+                     </children>
+                  </VBox>
+
+                  <Button fx:id="iniciarSesionButton"
+                          mnemonicParsing="false"
+                          onAction="#onIniciarSesionButtonClick"
+                          prefHeight="60.0"
+                          prefWidth="331.0"
+                          style="-fx-background-color: #F4842B;
+                                 -fx-background-radius: 10;
+                                 -fx-text-fill: WHITE;
+                                 -fx-font-weight: bold;"
+                          text="Iniciar sesión">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </VBox>
+
+            <VBox alignment="CENTER" spacing="10" style="-fx-padding: 20 0 0 0;">
+               <children>
+                  <Label fx:id="olvidoSuContraseñaLabel"
+                         onMouseClicked="#onOlvidoSuContraseñaLabelClick"
+                         style="-fx-underline: true; -fx-font-family: 'System';"
+                         text="¿Olvidó su contraseña?">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Label text="¿Todavía no estás registrado?" style="-fx-font-family: 'System';">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="registrarseAhoraLabel"
+                         onMouseClicked="#onRegistrarseAhoraLabelClick"
+                         text="Registrarse ahora"
+                         textFill="RED"
+                         style="-fx-font-family: 'System';">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+
+      <Pane fx:id="registrarseAhoraPopUpFondo"
+            onMouseClicked="#popUpRegistrarseComo"
+            prefHeight="700.0"
+            prefWidth="411.0"
+            style="-fx-background-color: #000; -fx-opacity: .5;"
+            visible="false" />
+
+      <VBox fx:id="registrarseAhoraPopUp"
+            layoutX="51.0"
+            layoutY="217.0"
+            prefHeight="232.0"
+            prefWidth="310.0"
+            style="-fx-background-color: #FAF3E0;
+                   -fx-background-radius: 15;"
+            visible="false">
+         <children>
+            <Label style="-fx-padding: 30; -fx-font-family: 'System';" text="Registrarse como">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Pane prefHeight="60.0" prefWidth="0.0" style="-fx-padding: 30;">
+               <children>
+                  <Button layoutX="23.0"
+                          layoutY="2.0"
+                          mnemonicParsing="false"
+                          onAction="#onRegistrarseComoUsuarioButtonClick"
+                          prefHeight="37.0"
+                          prefWidth="265.0"
+                          style="-fx-background-color: #F4842B;
+                                 -fx-background-radius: 10;
+                                 -fx-font-weight: bold;"
+                          text="Usuario"
+                          textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane prefHeight="60.0" prefWidth="0.0" style="-fx-padding: 30;">
+               <children>
+                  <Button layoutX="23.0"
+                          layoutY="2.0"
+                          mnemonicParsing="false"
+                          onAction="#onRegistrarseComoVeterinarioOLocalButtonClick"
+                          prefHeight="37.0"
+                          prefWidth="265.0"
+                          style="-fx-background-color: #F4842B;
+                                 -fx-background-radius: 10;
+                                 -fx-font-weight: bold;"
+                          text="Veterinario / Local"
+                          textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane prefHeight="60.0" prefWidth="0.0" style="-fx-padding: 30;">
+               <children>
+                  <Button layoutX="23.0"
+                          layoutY="2.0"
+                          mnemonicParsing="false"
+                          onAction="#onRegistrarseComoProtectoraButtonClick"
+                          prefHeight="37.0"
+                          prefWidth="265.0"
+                          style="-fx-background-color: #F4842B;
+                                 -fx-background-radius: 10;
+                                 -fx-font-weight: bold;"
+                          text="Protectora"
+                          textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</Pane>

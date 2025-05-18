@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.web.WebView?>
+
+<Pane fx:id="panelContenido" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="655.0" prefWidth="411.0" style="-fx-background-color: #FAF3E0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.petsafeapp.MapaLocalizadorController">
+   <children>
+      <HBox layoutX="55.0" layoutY="14.0" prefHeight="38.0" prefWidth="302.0" style="-fx-background-color: #F4842B; -fx-background-radius: 20;">
+         <children>
+            <ImageView fitHeight="38.0" fitWidth="52.0" onMouseClicked="#onSearchImageClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/lupa_blanca.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="searchDirectionTextField" prefHeight="138.0" prefWidth="237.0" style="-fx-background-color: transparent;" />
+         </children>
+      </HBox>
+      <WebView fx:id="webViewMapa" layoutY="66.0" prefHeight="589.0" prefWidth="411.0" />
+      <ImageView fitHeight="38.0" fitWidth="37.0" layoutX="354.0" layoutY="598.0" onMouseClicked="#onAddImageViewClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/circulo_con_mas.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</Pane>

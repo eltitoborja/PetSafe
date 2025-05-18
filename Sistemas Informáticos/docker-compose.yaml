@@ -1,0 +1,22 @@
+services:
+  db:
+    image: yobasystems/alpine-mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: ali
+      MYSQL_PASSWORD: ali
+      MYSQL_DATABASE: PetSafe
+    volumes:
+      - /home/dam1/mysql_data:/var/lib/mysql
+      - ./init:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
+    restart: always
+
+  web:
+    image: httpd:2.4
+    ports:
+      - "80:80"
+    volumes:
+      - /home/dam1/web:/usr/local/apache2/htdocs
+    restart: always

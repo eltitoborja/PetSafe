@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="panelRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="411.0" style="-fx-background-color: #FAF3E0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.petsafeapp.RegistroVeterinarioOLocalController">
+   <children>
+      <ImageView fitHeight="223.0" fitWidth="268.0" layoutX="73.0" layoutY="-28.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/logo-app.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="73.0" layoutY="155.0" prefHeight="522.0" prefWidth="265.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="86.0" prefWidth="265.0">
+                     <children>
+                        <Label text="Foto">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button mnemonicParsing="false" onAction="#onSeleccionarFotoButtonClick" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-background-radius: 7.5; -fx-border-radius: 7.5;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fx:id="fotoImageView" fitHeight="42.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/nuevo-archivo.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="79.0" prefWidth="386.0">
+                     <children>
+                        <Label text="Nombre de la empresa">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="nombreTextField" prefHeight="37.0" prefWidth="265.0" promptText="Nombre..." style="-fx-background-radius: 7.5; -fx-border-radius: 7.5; -fx-background-color: #fff; -fx-border-color: #000;" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <VBox prefHeight="86.0" prefWidth="265.0">
+               <children>
+                  <Label text="Descripción">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="descripcionTextField" prefHeight="37.0" prefWidth="265.0" promptText="Descripción..." style="-fx-background-radius: 7.5; -fx-border-radius: 7.5; -fx-background-color: #fff; -fx-border-color: #000;" />
+               </children>
+            </VBox>
+            <VBox prefHeight="86.0" prefWidth="265.0">
+               <children>
+                  <Label text="Email">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="emailTextField" prefHeight="37.0" prefWidth="265.0" promptText="Email..." style="-fx-background-radius: 7.5; -fx-border-radius: 7.5; -fx-background-color: #fff; -fx-border-color: #000;" />
+               </children>
+            </VBox>
+            <VBox prefHeight="86.0" prefWidth="265.0">
+               <children>
+                  <Label text="Dirección">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="direccionTextField" prefHeight="37.0" prefWidth="265.0" promptText="Dirección..." style="-fx-background-radius: 7.5; -fx-border-radius: 7.5; -fx-background-color: #fff; -fx-border-color: #000;" />
+               </children>
+            </VBox>
+            <VBox prefHeight="86.0" prefWidth="265.0">
+               <children>
+                  <Label text="Teléfono de contacto">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="telefonoTextField" prefHeight="37.0" prefWidth="265.0" promptText="Teléfono de contacto..." style="-fx-background-radius: 7.5; -fx-border-radius: 7.5; -fx-background-color: #fff; -fx-border-color: #000;" />
+               </children>
+            </VBox>
+            <VBox prefHeight="86.0" prefWidth="265.0">
+               <children>
+                  <Label text="Contraseña">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="contraseñaPasswordField" prefHeight="37.0" prefWidth="265.0" promptText="Contraseña..." style="-fx-background-radius: 7.5; -fx-border-radius: 7.5; -fx-background-color: #fff; -fx-border-color: #000;" />
+               </children>
+            </VBox>
+            <VBox prefHeight="86.0" prefWidth="265.0">
+               <children>
+                  <Label text="Confirmar contraseña">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="confirmarContraseñaPasswordField" prefHeight="37.0" prefWidth="265.0" promptText="Contraseña..." style="-fx-background-radius: 7.5; -fx-background-color: #fff; -fx-border-radius: 7.5; -fx-border-color: #000;" />
+               </children>
+            </VBox>
+            <VBox prefHeight="86.0" prefWidth="265.0">
+               <children>
+                  <Label text="Tipo de negocio">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="tipoNegocioComboBox" prefHeight="25.0" prefWidth="287.0" promptText="Tipo de negocio" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-background-radius: 7.5; -fx-border-radius: 7.5;" />
+               </children>
+            </VBox>
+            <CheckBox fx:id="terminosYCondicionesCheckBox" mnemonicParsing="false" prefHeight="61.0" prefWidth="265.0" text="Acepto los términos y condiciones" />
+            <Button mnemonicParsing="false" onAction="#onRegistrarVeterinarioOLocalButtonClick" prefHeight="50.0" prefWidth="265.0" style="-fx-background-color: #F4842B; -fx-background-radius: 7.5;" text="Registrar" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </VBox>
+      <ImageView fitHeight="27.0" fitWidth="25.0" layoutX="24.0" layoutY="24.0" onMouseClicked="#onFlechaAtrasClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/flecha_atras.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</Pane>
